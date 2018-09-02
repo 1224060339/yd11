@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品查看</title>
+    <link rel="stylesheet" href='../static/css/sws.css'>
+</head>
+<body>
+    <form action="02_login" method="post">
+        <table width='400' border='1' cellpadding='10' cellspacing='0'>
+            <tr>
+                <td width=100px>商品名称</td>
+                <td width=100px>商品数量</td>
+                <td width=100px>商品价格</td>
+            </tr>
+        </table>
+        <table width='400' border='1' cellpadding='10' cellspacing='0'>
+            {% for i in shps %}
+            <tr>
+                <td width=100px>{{i.shpmc}}</td>
+                <td width=100px>{{i.shpshl}}</td>
+                <td width=100px>{{i.shpjg}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+    <a href="/01_login/" id='aaa'>返回商品添加</a>
+    <a href="/03_login/" id='aa'>商品信息修改</a>
+</body>
+</html>

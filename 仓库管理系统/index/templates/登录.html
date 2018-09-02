@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录</title>
+		<link rel="stylesheet" href='../static/css/login.css'>
+	</head>
+	<body>
+		<!--页面顶部内容-->
+		<h2>仓库管理登录</h2>
+		<div class='ds1'>
+			<p>{{a}}</p>
+			<form id="/login/" action="/login/" method="post">
+				{% csrf_token %}
+				<div class='d1'>
+					<!--用户名称-->
+					<div class='d1a'>
+						<p class='p1'>用户名称</p>
+						<input id='input1' type="text" name="uname" placeholder='6~14位字符' maxlength=14>
+					</div class='d2a'>
+					<!--用户密码-->
+					<div class='d2a'>
+						<p class='p2'>用户密码</p>
+						<input id='input2' type="password" name="upwd" placeholder='6~18位字符' maxlength=18>
+					</div>
+					<!--记住密码-->
+					<p class="p3">
+						<input type="checkbox" name="isSaved">记住密码？
+					</p>
+					<!--用户注册-忘记密码?-->
+					<p class="p4">
+						<a href="#" id='a1'>忘记密码？</a>
+						<a href="/register/" id='a2'>新用户注册</a>
+					</p>
+					<!--登录-->
+					<input type="submit" value='登录' class='input3'>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

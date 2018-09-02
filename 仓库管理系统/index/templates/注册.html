@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href='../static/css/register.css'>
+	<script src="../static/js/register.js"></script>
+</head>
+<body>
+	<h2>用户注册</h2>
+	<form action='/register/' method='post' onsubmit='return validateForm()'>
+		{% csrf_token %}
+		<p>{{a}}</p>
+		<p>{{b}}</p>
+		<p>{{c}}</p>
+		<div id='d1'>
+			<table width='400' border='1' cellpadding='10' cellspacing='0'>
+				<tr>
+					<td>用户名</td>
+					<td><input type='text' name='uname' id='username'　placeholder='6~14位字符' maxlength=14></td>
+				</tr>
+				<tr>
+					<td>密码</td>
+					<td><input type='password' name='upwd' id='password'　placeholder='6~18位字符' maxlength=18></td>
+				</tr>
+				<tr>
+					<td>确认密码</td>
+					<td><input type='password' name='upwd1' id='password2'　placeholder='6~18位字符' maxlength=18></td>
+				</tr>
+				<tr>
+					<td>电话号码</td>
+					<td><input type='text' name='uphone' id='uphone'　maxlength=11 placeholder='电话号码不能为空'></td>
+				</tr>
+				<tr>
+					<td>电子邮箱</td>
+					<td><input type='text' name='uemail' id='uemail' placeholder='电子邮箱不能为空'></td>
+				</tr>
+				<tr>
+					<td colspan='2'><input id='input' type='submit' value='免费注册'></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</body>
+</html>

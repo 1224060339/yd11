@@ -1,0 +1,17 @@
+#d1{
+    height:400px;
+    width:auto;
+    padding-left:200px;
+    background-color:#87CEEB;
+    margin-top:20px;
+}
+h2{
+    color:#999;
+    border-bottom:1px solid #ccc;
+    font-weight:400;
+    padding-bottom:15px;
+    margin-bottom:30px;
+}
+#input{
+    margin-left:150px;
+}

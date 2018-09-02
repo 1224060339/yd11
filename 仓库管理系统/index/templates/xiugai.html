@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品修改</title>
+    <link rel="stylesheet" href='../static/css/sws.css'>
+    <script src="../static/js/www.js"></script>
+</head>
+<body>
+    <p>{{a}}</p>
+    <form action="/03_login/" method="post">
+        {% csrf_token %}
+            <table id='tb' width='400' border='1' cellpadding='10' cellspacing='0'>
+                <tr>
+                    <td><p>商品名称</p></td>
+                    <td><p>商品数量</p></td>
+                    <td><p>商品价格</p></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="ushpmc" maxlength="50"></td>
+                    <td><input type="text" name="ushpshl" maxlength="6"></td>
+                    <td><input type="text" name="ushpjg" maxlength="6"></td>
+                </tr>
+            </table>
+            <a href="/01_login/">添加商品信息</a>
+            <a href="/02_login/" id='a1'>查看所有商品</a>
+            <input type="submit" value="保存" id='input000'>
+            <input type="button" value="+" onclick="addRow()" id='input000'>
+    </form>
+</body>
+</html>
