@@ -1,5 +1,5 @@
 from socket import * 
-import os,sys 
+import os,sys
 
 def do_login(s,user,name,addr):
     if (name in user) or name == "管理员":

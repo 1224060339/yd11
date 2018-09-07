@@ -85,9 +85,9 @@ class sqlserver():
     def __init__(self):
         try:
             # 连接数据库
-            self.conn = pymysql.connect(host="MySQL数据库地址",
-                                        user="数据库用户名", password="数据库的密码",
-                                        database="储存消息的数据库", charset="utf8")  # 此处需自己添加自己的数据库数据
+            self.conn = pymysql.connect(host="localhost",
+                                        user="root", password="123456",
+                                        database="weixing", charset="utf8")  # 此处需自己添加自己的数据库数据
             # 关闭事务功能,立即提交sql语句
             self.conn.autocommit(True)
             # 创建游标对象

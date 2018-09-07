@@ -32,6 +32,7 @@ def main():
     s.listen(5)
     #忽略子进程退出
     #signal.signal(signal.SIGCHLD,signal.SIG_IGN)
+    #os.wait()
 
     while True:
         try:
